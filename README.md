@@ -64,15 +64,27 @@ Modern solar asset management requires moving from reactive maintenance to autom
 
 ## 📊 Results & Visualizations
 
-| Monthly Energy Yield | Thermal Anomaly Detection |
-| :---: | :---: |
-| ![Monthly Yield](monthly_yield.png) | ![Thermal Anomalies](thermal_anomalies.png) |
-| *Simulated AC energy output profile across the annual TMY period.* | *Isolation Forest identifying thermal overheating anomalies.* |
+### 1. Simulated Monthly AC Energy Yield
+![Monthly AC Energy Yield](monthly_yield.png)
+*Annual AC energy generation profile for the 1 MWp array in Glasgow, demonstrating seasonal yield variations and applying realistic inverter & Balance of System (BOS) electrical losses.*
 
-| 7-Day Forecast Horizon | Day-Ahead Operational Schedule |
-| :---: | :---: |
-| ![7-Day Forecast](power_forecast.png) | ![Day Ahead Forecast](forecast_2026-07-29.png) |
-| *Out-of-sample actual vs. XGBoost predicted generation.* | *Automated 24-hour day-ahead forecast vs. historical baseline.* |
+---
+
+### 2. Operational Thermal Anomaly Detection
+![Thermal Anomaly Detection](thermal_anomalies.png)
+Unsupervised Isolation Forest isolating thermal overheating anomalies ( $T_{\text{cell}}$ vs. POA Irradiance) during active daylight operating hours ($>50 \text{ W/m}^2$).
+
+---
+
+### 3. 7-Day Out-of-Sample Power Generation Forecast
+![7-Day Next-Day Forecast](power_forecast.png)
+*XGBoost model performance over a 7-day test horizon, demonstrating robust prediction tracking across both clear-sky peaks and cloud-attenuated days without data leakage.*
+
+---
+
+### 4. Day-Ahead Operational Schedule vs. Historical Baseline
+![Day-Ahead Forecast](forecast_2026-07-29.png)
+*Automated 24-hour day-ahead forecast generated for grid scheduling and battery dispatch, overlaying predicted generation against yesterday's actual yield.*
 
 ---
 
