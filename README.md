@@ -101,9 +101,9 @@ Launch the pipeline instantly in your browser with zero setup:
 
 ```
 ├── solar_pv_digital_twin.ipynb  # Interactive Google Colab Notebook
-├── main.py                     # Master execution Python script
+├── main.py (tbc)               # Master execution Python script
 ├── solar_xgboost_model.json    # Serialized production XGBoost model
-├── requirements.txt            # Dependencies list
+├── requirements.txt (tbc)      # Dependencies list
 ├── README.md                   # Documentation
 └── assets/                     # Output visualizations
     ├── monthly_yield.png
